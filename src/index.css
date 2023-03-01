@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+	body{
+		background: #F4F4F4;
+		font-family: 'Helvetica';
+	}
+	h2, .h2{
+		@apply font-bold text-2xl sm:text-[40px] leading-tight
+	}
+}
+
+h1,h2,h3,p{
+	@apply leading-tight
+}
+
+@layer components{
+	.container{
+		@apply max-w-[1240px]
+	}
+	@media(min-width: 1260px){
+		.container-left{
+			margin-left: calc((100vw - 1240px) / 2);
+		}
+	}
+	.button{
+		@apply text-center border border-textColor w-full sm:max-w-[300px] h-12 flex items-center justify-center uppercase transition-all hover:bg-textColor hover:text-white
+	}
+}
